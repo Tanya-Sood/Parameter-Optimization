@@ -2,7 +2,7 @@
 
 This project applies Support Vector Machines (SVM) to a multi-class classification problem using a UCI dataset. The focus is on tuning the nu parameter and kernel type of NuSVC using metaheuristic optimization strategies over multiple random samples.
 
----
+--
 
 ## Methodology
 
