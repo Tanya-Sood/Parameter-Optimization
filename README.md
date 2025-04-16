@@ -1,20 +1,20 @@
 # Multi-Class SVM Optimization using Metaheuristics
 
-This project applies Support Vector Machines (SVM) to a multi-class classification problem using a UCI dataset. The focus is on tuning the `nu` parameter and kernel type of `NuSVC` using metaheuristic optimization strategies over multiple random samples.
+This project applies Support Vector Machines (SVM) to a multi-class classification problem using a UCI dataset. The focus is on tuning the nu parameter and kernel type of NuSVC using metaheuristic optimization strategies over multiple random samples.
 
 ---
 
 ## Methodology
 
 1. **Dataset:** Multi-class dataset from the UCI Machine Learning Repository.
-2. **Model:** `NuSVC` from Scikit-learn, a variant of SVM using the `nu` parameter instead of `C`.
+2. **Model:** NuSVC from Scikit-learn, a variant of SVM using the nu parameter instead of C.
 3. **Optimization Strategy:**
    - 10 random samples of the dataset were generated.
    - Each sample underwent 100 iterations of metaheuristic optimization.
    - Parameters optimized:  
-     - `Kernel`: `'linear'`, `'poly'`, `'rbf'`, `'sigmoid'`  
-     - `Nu`: A float between (0,1)  
-     - `Epsilon`: Tuned (though not directly relevant to `NuSVC`, assumed part of extended tuning)
+     - Kernel: 'linear', 'poly', 'rbf', 'sigmoid'  
+     - Nu: A float between (0,1)  
+     - Epsilon: Tuned (though not directly relevant to NuSVC, assumed part of extended tuning)
 4. **Evaluation Metric:** Accuracy on the test set for each sample.
 
 ---
@@ -40,10 +40,6 @@ This project applies Support Vector Machines (SVM) to a multi-class classificati
 
 ## Result Graph
 
-The graph below represents the accuracy of the best-performing sample across 100 iterations.
-
-![Accuracy Convergence](./graph.png)
-
 - The model rapidly improved its accuracy in the first 25 iterations.
 - Accuracy stabilized at 100%, indicating early convergence of the optimizer.
 
@@ -52,15 +48,15 @@ The graph below represents the accuracy of the best-performing sample across 100
 ## Requirements
 
 - Python 3.7+
-- `scikit-learn`
-- `matplotlib`
-- `numpy`
-- `pandas`
+- scikit-learn
+- matplotlib
+- numpy
+- pandas
 
 ---
 
 ## Conclusion
 
 - Metaheuristic optimization is effective in quickly finding high-accuracy SVM configurations.
-- The `rbf` kernel consistently performed best across all samples.
+- The rbf kernel consistently performed best across all samples.
 - NuSVC achieved up to **99.81%** accuracy using optimal hyperparameter settings.
