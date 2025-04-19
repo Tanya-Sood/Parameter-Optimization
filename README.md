@@ -40,6 +40,7 @@ This project applies Support Vector Machines (SVM) to a multi-class classificati
 
 ## Result Graph
 
+![Result Graph](result_graph.png)
 - The model rapidly improved its accuracy in the first 25 iterations.
 - Accuracy stabilized at 100%, indicating early convergence of the optimizer.
 
